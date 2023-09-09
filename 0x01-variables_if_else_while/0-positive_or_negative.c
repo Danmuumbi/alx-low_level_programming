@@ -10,6 +10,7 @@
  * Return: always (Success)
  *
  */
+
 int main(void)
 {
 	int n;
