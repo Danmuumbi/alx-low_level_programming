@@ -5,7 +5,7 @@
  *
  * Return: Always 0.
  */
-
+int _abs(int n);
 int main(void)
 {
     int r;
