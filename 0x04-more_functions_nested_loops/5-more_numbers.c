@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* more_numbers - Prints 10 times the numbers from 0 to 14 followed by a new line.
+* more_numbers - Prints 10 times the numbers from 0 to 14
 */
 
 void more_numbers(void)
@@ -14,9 +14,9 @@ void more_numbers(void)
 		{
 			if (j >= 10)
 			{
-				_putchar('0' + (j / 10)); // Print the tens digit
+				_putchar('0' + (j / 10));
 			}
-			_putchar('0' + (j % 10)); // Print the ones digit
+			_putchar('0' + (j % 10));
 		}
 		_putchar('\n');
 	}
