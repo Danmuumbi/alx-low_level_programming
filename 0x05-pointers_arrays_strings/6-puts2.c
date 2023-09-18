@@ -10,11 +10,11 @@ void puts2(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (i % 2 == 0)  // Check if the index is even
+		if (i % 2 == 0)
 			_putchar(str[i]);
 		i++;
 	}
 
-	_putchar('\n'); // Print a new line after the characters
+	_putchar('\n');
 }
 
