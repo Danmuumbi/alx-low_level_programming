@@ -10,40 +10,40 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-    char *concatenated;
-    unsigned int len1 = 0, len2 = 0;
-    unsigned int i, j;
+	char *concatenated;
+	unsigned int len1 = 0, len2 = 0;
+	unsigned int i, j;
 
-    /* Check if s1 is NULL and treat it as an empty string */
-    if (s1 == NULL)
-        s1 = "";
-    
-    /* Check if s2 is NULL and treat it as an empty string */
-    if (s2 == NULL)
-        s2 = "";
+	/* Check if s1 is NULL and treat it as an empty string */
+	if (s1 == NULL)
+		s1 = "";
 
-    /* Calculate the lengths of s1 and s2 */
-    while (s1[len1])
-        len1++;
-    while (s2[len2])
-        len2++;
+	/* Check if s2 is NULL and treat it as an empty string */
+	if (s2 == NULL)
+		s2 = "";
 
-    /* Allocate memory for the concatenated string (+1 for null-terminator) */
-    concatenated = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	/* Calculate the lengths of s1 and s2 */
+	while (s1[len1])
+		len1++;
+	while (s2[len2])
+		len2++;
 
-    if (concatenated == NULL)
-        return (NULL);
+	/* Allocate memory for the concatenated string (+1 for null-terminator) */
+	concatenated = (char *)malloc((len1 + len2 + 1) * sizeof(char));
 
-    /* Copy the characters from s1 to concatenated */
-    for (i = 0; i < len1; i++)
-        concatenated[i] = s1[i];
+	if (concatenated == NULL)
+		return (NULL);
 
-    /* Copy the characters from s2 to concatenated */
-    for (j = 0; j < len2; j++)
-        concatenated[i + j] = s2[j];
+	/* Copy the characters from s1 to concatenated */
+	for (i = 0; i < len1; i++)
+		concatenated[i] = s1[i];
 
-    /* Add null-terminator to the end of the concatenated string */
-    concatenated[i + j] = '\0';
+	/* Copy the characters from s2 to concatenated */
+	for (j = 0; j < len2; j++)
+		concatenated[i + j] = s2[j];
 
-    return (concatenated);
+	/* Add null-terminator to the end of the concatenated string */
+	concatenated[i + j] = '\0';
+
+	return (concatenated);
 }
