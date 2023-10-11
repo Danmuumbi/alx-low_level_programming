@@ -11,6 +11,7 @@
 * the comparison function does not return 0. If no element matches, or if
 * size <= 0, it returns -1.
 */
+
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
@@ -20,8 +21,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 		for (i = 0; i < size; i++)
 		{
 			if (cmp(array[i]) != 0)
-				return i;
+				return (i);
 		}
 	}
-	return -1;
+	return (-1);
 }
