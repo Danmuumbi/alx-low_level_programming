@@ -1,18 +1,16 @@
 section .data
-    hello db "Hello, Holberton",10,0 ; The string to print, followed by a new line character and null terminator
+    hello db "Hello, Holberton", 10, 0 ; 10 is ASCII for newline, 0 is null terminator
 
 section .text
-    global _start
-
     extern printf
 
-_start:
-    push rbp          ; Save the base pointer
-    mov rdi, hello    ; Load the address of the hello string into rdi
-    call printf       ; Call the printf function
-    pop rbp           ; Restore the base pointer
+    global main
 
-    ; Exit the program
-    mov rax, 60       ; syscall number for exit
-    xor rdi, rdi      ; Status code 0
-    syscall
+main:
+    push rbp
+    mov rdi, hello ; Set the first argument (format string)
+    call printf    ; Call the printf function
+    pop rbp
+
+    mov eax, 0     ; Return 0 from main
+    ret
